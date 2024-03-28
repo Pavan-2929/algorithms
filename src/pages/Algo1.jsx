@@ -115,6 +115,20 @@ public class PreemptivePriorityScheduling {
       <div className="bg-gray-100 rounded-lg p-6 transition-all duration-300 hover:bg-gray-200 mb-6">
         <h2 className="text-2xl font-semibold mb-4">Description:</h2>
         <p className="text-lg">
+          Preemptive Priority CPU Scheduling Algorithm is a pre-emptive method
+          of CPU scheduling algorithm that works based on the priority of a
+          process. In this algorithm, the scheduler schedules the tasks to work
+          as per the priority, which means that a higher priority process should
+          be executed first. In case of any conflict, i.e., when there is more
+          than one process with equal priorities, then the pre-emptive priority
+          CPU scheduling algorithm works on the basis of FCFS (First Come First
+          Serve) algorithm.
+        </p>
+        <p className="text-lg font-bold mt-4">
+          How does Preemptive Priority CPU Scheduling Algorithm decide the
+          Priority of a Process?
+        </p>
+        <p className="text-lg">
           Preemptive Priority CPU Scheduling Algorithm uses a rank-based system
           to define a rank for each process, where lower rank processes have
           higher priority and higher rank processes have lower priority. For
