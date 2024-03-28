@@ -81,11 +81,16 @@ class ReaderWritersProblem {
       <div className="bg-gray-100 rounded-lg p-6 transition-all duration-300 hover:bg-gray-200 mb-6">
         <h2 className="text-2xl font-semibold mb-4">Description:</h2>
         <p className="text-lg">
-          The Preemptive Priority CPU Scheduling Algorithm is a method that
-          schedules tasks based on their priority, ensuring that higher priority
-          processes are executed first. In cases of equal priorities, the
-          algorithm resorts to First Come First Serve (FCFS). It's useful for
-          real-time systems where responsiveness is critical.
+          The Reader-Writer Problem is a classic synchronization problem in
+          computer science where multiple threads try to access a shared
+          resource. In this particular implementation using Java, the code
+          demonstrates a solution using Semaphores for synchronization. Readers
+          can access the shared resource simultaneously, whereas writers require
+          exclusive access. Semaphores, such as Mutex and Binary Semaphores, are
+          utilized to control access to the shared resource, ensuring data
+          integrity and preventing race conditions. This implementation
+          exemplifies how Semaphores are employed to address the concurrency
+          issues in the reader-writer scenario.
         </p>
       </div>
 

@@ -59,11 +59,10 @@ public class LRUPageReplacement {
       <div className="bg-gray-100 rounded-lg p-6 transition-all duration-300 hover:bg-gray-200 mb-6">
         <h2 className="text-2xl font-semibold mb-4">Description:</h2>
         <p className="text-lg">
-          The provided code implements the Least Recently Used (LRU) page
-          replacement algorithm in Java. LRU is a popular greedy algorithm used
-          in operating systems to minimize page faults in memory management. It
-          operates based on the principle of locality of reference, favoring
-          pages that have not been accessed for the longest time.
+          LRU is a popular greedy algorithm used in operating systems to
+          minimize page faults in memory management. It operates based on the
+          principle of locality of reference, favoring pages that have not been
+          accessed for the longest time.
         </p>
       </div>
 
