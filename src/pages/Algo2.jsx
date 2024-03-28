@@ -78,6 +78,17 @@ class ReaderWritersProblem {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">The Reader-Writer Problem</h1>
 
+      <div className="bg-gray-100 rounded-lg p-6 transition-all duration-300 hover:bg-gray-200 mb-6">
+        <h2 className="text-2xl font-semibold mb-4">Description:</h2>
+        <p className="text-lg">
+          The Preemptive Priority CPU Scheduling Algorithm is a method that
+          schedules tasks based on their priority, ensuring that higher priority
+          processes are executed first. In cases of equal priorities, the
+          algorithm resorts to First Come First Serve (FCFS). It's useful for
+          real-time systems where responsiveness is critical.
+        </p>
+      </div>
+
       {/* Description Section */}
       <div className="bg-gray-100 rounded-lg p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-4">Algorithm:</h2>
@@ -185,6 +196,18 @@ class ReaderWritersProblem {
             performance in certain scenarios.
           </li>
         </ul>
+      </div>
+
+      <div className="bg-gray-100 rounded-lg p-6 transition-all duration-300 hover:bg-gray-200">
+        <h2 className="text-2xl font-semibold mb-4">Conclusion</h2>
+        <p className="text-lg">
+          The Preemptive Priority CPU Scheduling Algorithm is a crucial method
+          for managing processes in computing systems. By prioritizing tasks
+          based on their importance and dynamically allocating CPU resources,
+          this algorithm ensures prompt execution of high-priority tasks and
+          improved system responsiveness. However, it comes with its set of
+          challenges and considerations.
+        </p>
       </div>
     </div>
   );

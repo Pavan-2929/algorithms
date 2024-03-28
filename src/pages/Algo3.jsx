@@ -46,13 +46,14 @@ const Algo3 = () => {
 return (
   <div className="container mx-auto px-4 py-8">
     <h1 className="text-3xl font-bold mb-4">First Come First Serve (FCFS)</h1>
-    <p className="text-lg mb-6">
-      FCFS is the simplest disk scheduling algorithm. As the name suggests, this
-      algorithm entertains requests in the order they arrive in the disk queue.
-      Although it ensures fairness, it may not provide the fastest service.
-    </p>
     <div className="bg-gray-100 rounded-lg p-6 transition-all duration-300 hover:bg-gray-200 mb-6">
-      <h2 className="text-2xl font-semibold mb-4">Task</h2>
+      <h2 className="text-2xl font-semibold mb-4">Description:</h2>
+      <p className="text-lg mb-2">
+        FCFS is the simplest disk scheduling algorithm where disk requests are
+        serviced in the order they arrive in the disk queue. Each request gets a
+        fair chance to access the disk, but it may not provide the fastest
+        service, especially if there are requests located far apart on the disk.
+      </p>
       <p className="text-lg">
         Given an array of disk track numbers and initial head position, the task
         is to find the total number of seek operations done to access all the
