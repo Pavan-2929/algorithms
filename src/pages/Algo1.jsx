@@ -174,26 +174,70 @@ public class PreemptivePriorityScheduling {
       <div className="bg-gray-100 rounded-lg p-6 mb-6 transition-all duration-300 hover:bg-gray-200">
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FiCheckCircle className="mr-2 text-green-500" /> Advantages of
-          preemptive priority scheduling:
+          Priority Preemptive Scheduling:
         </h2>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Prompt execution of high-priority tasks.</li>
-          <li>Dynamic allocation of CPU resources based on priorities.</li>
-          <li>Improved system responsiveness.</li>
-          <li>Ensures fairness by preempting lower priority tasks.</li>
+        <ul className="list-disc pl-6 mb-4 flex flex-col gap-4">
+          <li>
+            High Priority Tasks are Executed Promptly: The main advantage of
+            preemptive priority scheduling is that high-priority tasks are
+            executed promptly. This ensures that critical tasks are given
+            immediate attention, leading to better responsiveness in real-time
+            systems.
+          </li>
+          <li>
+            Flexible Allocation of CPU Resources: Preemptive priority scheduling
+            allows for dynamic allocation of CPU resources based on task
+            priorities. This flexibility ensures that important tasks receive
+            adequate processing time, even in a multitasking environment.
+          </li>
+          <li>
+            Improved System Responsiveness: By prioritizing tasks based on their
+            importance, preemptive priority scheduling can lead to improved
+            system responsiveness, especially in scenarios where certain tasks
+            require immediate attention or have strict deadlines.
+          </li>
+          <li>
+            Fairness: Preemptive priority scheduling ensures fairness by
+            allowing higher priority tasks to preempt lower priority ones. This
+            prevents low-priority tasks from monopolizing CPU resources and
+            ensures that all tasks get a fair share of processing time.
+          </li>
         </ul>
       </div>
 
       {/* Disadvantages Section */}
       <div className="bg-gray-100 rounded-lg p-6 mb-6 transition-all duration-300 hover:bg-gray-200">
         <h2 className="text-2xl font-bold mb-4 flex items-center">
-          <FiXCircle className="mr-2 text-red-500" /> Disadvantages of
-          preemptive priority scheduling:
+          <FiXCircle className="mr-2 text-red-500" /> Disadvantages of Priority
+          Preemptive Scheduling:
         </h2>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Possibility of starvation for low-priority tasks.</li>
-          <li>Susceptibility to priority inversion.</li>
-          <li>Increased complexity and potential for indefinite blocking.</li>
+        <ul className="list-disc pl-6 mb-4 flex flex-col gap-4">
+          <li>
+            Starvation: One of the significant disadvantages of preemptive
+            priority scheduling is the possibility of starvation, where lower
+            priority tasks may never get the chance to execute if higher
+            priority tasks keep arriving. This can occur if there is a
+            continuous stream of high-priority tasks.
+          </li>
+          <li>
+            Priority Inversion: Preemptive priority scheduling is susceptible to
+            priority inversion, a scenario where a low-priority task holds a
+            resource needed by a high-priority task, effectively blocking the
+            high-priority task from executing. This can lead to performance
+            degradation and system instability.
+          </li>
+          <li>
+            Complexity: Preemptive priority scheduling introduces complexity
+            into the scheduling algorithm due to the continuous monitoring of
+            task priorities and potential context switching. This complexity can
+            increase the overhead of the system and may require additional
+            computational resources.
+          </li>
+          <li>
+            Indefinite Blocking: If higher priority tasks keep arriving, lower
+            priority tasks may face indefinite blocking, leading to delayed
+            execution or even loss of functionality for those tasks.
+          </li>
         </ul>
       </div>
 
