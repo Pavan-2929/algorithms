@@ -115,11 +115,13 @@ public class PreemptivePriorityScheduling {
       <div className="bg-gray-100 rounded-lg p-6 transition-all duration-300 hover:bg-gray-200 mb-6">
         <h2 className="text-2xl font-semibold mb-4">Description:</h2>
         <p className="text-lg">
-          The Preemptive Priority CPU Scheduling Algorithm is a method that
-          schedules tasks based on their priority, ensuring that higher priority
-          processes are executed first. In cases of equal priorities, the
-          algorithm resorts to First Come First Serve (FCFS). It's useful for
-          real-time systems where responsiveness is critical.
+          Preemptive Priority CPU Scheduling Algorithm uses a rank-based system
+          to define a rank for each process, where lower rank processes have
+          higher priority and higher rank processes have lower priority. For
+          instance, if there are 10 processes to be executed using this
+          Preemptive Algorithm, then process with rank 1 will have the highest
+          priority, the process with rank 2 will have comparatively lesser
+          priority, and process with rank 10 will have least priority.
         </p>
       </div>
 
@@ -171,7 +173,8 @@ public class PreemptivePriorityScheduling {
       {/* Advantages Section */}
       <div className="bg-gray-100 rounded-lg p-6 mb-6 transition-all duration-300 hover:bg-gray-200">
         <h2 className="text-2xl font-bold mb-4 flex items-center">
-          <FiCheckCircle className="mr-2 text-green-500" /> Advantages:
+          <FiCheckCircle className="mr-2 text-green-500" /> Advantages of
+          preemptive priority scheduling:
         </h2>
         <ul className="list-disc pl-6 mb-4">
           <li>Prompt execution of high-priority tasks.</li>
@@ -184,7 +187,8 @@ public class PreemptivePriorityScheduling {
       {/* Disadvantages Section */}
       <div className="bg-gray-100 rounded-lg p-6 mb-6 transition-all duration-300 hover:bg-gray-200">
         <h2 className="text-2xl font-bold mb-4 flex items-center">
-          <FiXCircle className="mr-2 text-red-500" /> Disadvantages:
+          <FiXCircle className="mr-2 text-red-500" /> Disadvantages of
+          preemptive priority scheduling:
         </h2>
         <ul className="list-disc pl-6 mb-4">
           <li>Possibility of starvation for low-priority tasks.</li>
@@ -196,12 +200,12 @@ public class PreemptivePriorityScheduling {
       <div className="bg-gray-100 rounded-lg p-6 transition-all duration-300 hover:bg-gray-200">
         <h2 className="text-2xl font-semibold mb-4">Conclusion</h2>
         <p className="text-lg">
-          The Reader-Writer Problem presents a fundamental challenge in
-          concurrent programming, and the provided Java code offers a solution
-          using semaphores for synchronization. Semaphores provide a flexible
-          and efficient mechanism for controlling access to shared resources,
-          ensuring orderly execution of processes and fairness in resource
-          allocation.
+          The Preemptive Priority CPU Scheduling Algorithm is a crucial method
+          for managing processes in computing systems. By prioritizing tasks
+          based on their importance and dynamically allocating CPU resources,
+          this algorithm ensures prompt execution of high-priority tasks and
+          improved system responsiveness. However, it comes with its set of
+          challenges and considerations.
         </p>
       </div>
     </div>
