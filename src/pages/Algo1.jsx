@@ -149,6 +149,11 @@ public class PreemptivePriorityScheduling {
         </div>
       </div>
 
+      <div className="flex justify-around items-center flex-wrap bg-gray-100 rounded-lg p-6 mb-6 transition-all duration-300 hover:bg-gray-200">
+        <img src={"1image1.jpg"} alt="" />
+        <img src={"1image2.jpg"} alt="" />
+      </div>
+
       {/* Code Syntax Highlighting */}
       <div className="bg-gray-100 rounded-lg p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-4">Java Code:</h2>
@@ -163,10 +168,6 @@ public class PreemptivePriorityScheduling {
         <img src="/1output.png" alt="Output Screenshot" />
       </div>
 
-      <div className="flex justify-around items-center flex-wrap bg-gray-100 rounded-lg p-6 mb-6 transition-all duration-300 hover:bg-gray-200">
-        <img src={"1image1.jpg"} alt="" />
-        <img src={"1image2.jpg"} alt="" />
-      </div>
       {/* Advantages Section */}
       <div className="bg-gray-100 rounded-lg p-6 mb-6 transition-all duration-300 hover:bg-gray-200">
         <h2 className="text-2xl font-bold mb-4 flex items-center">
