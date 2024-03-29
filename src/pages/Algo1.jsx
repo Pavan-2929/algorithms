@@ -247,11 +247,6 @@ public class PreemptivePriorityScheduling {
             increase the overhead of the system and may require additional
             computational resources.
           </li>
-          <li>
-            Indefinite Blocking: If higher priority tasks keep arriving, lower
-            priority tasks may face indefinite blocking, leading to delayed
-            execution or even loss of functionality for those tasks.
-          </li>
         </ul>
       </div>
 
