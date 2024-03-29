@@ -9,14 +9,16 @@ import java.util.Scanner;
 
 public class PriorityPreemptive {
 
+    // Variables to store process data
     int burstTime[];
     int priority[];
     int arrivalTime[];
     String[] processId;
     int numberOfProcess;
 
+    // Method to get process data from user input
     void getProcessData(Scanner input) {
-        System.out.print("Enter the number of Process for Scheduling: ");
+        System.out.print("Enter the number of Processes for Scheduling: ");
         int inputNumberOfProcess = input.nextInt();
         numberOfProcess = inputNumberOfProcess;
         burstTime = new int[numberOfProcess];
@@ -35,6 +37,7 @@ public class PriorityPreemptive {
         }
     }
 
+    // Method to implement preemptive priority scheduling algorithm
     void preemptivePriorityAlgorithm() {
         int currentTime = 0;
         int completed = 0;
@@ -78,6 +81,7 @@ public class PriorityPreemptive {
         System.out.print("|" + id + " -> " + currentTime + "|");
         System.out.println();
 
+        // Calculate average waiting time and turn around time
         float sumWaiting = 0;
         float sumTurnAround = 0;
         for (int i = 0; i < numberOfProcess; i++) {
@@ -88,6 +92,7 @@ public class PriorityPreemptive {
         float averageWaitingTime = sumWaiting / numberOfProcess;
         float averageTurnAroundTime = sumTurnAround / numberOfProcess;
 
+        // Display scheduling results
         System.out.println("\nPreemptive Priority Scheduling Algorithm:\n");
         System.out.format("%20s%20s%20s%20s%20s%20s%20s\n", "ProcessId", "BurstTime", "ArrivalTime", "Priority", "WaitingTime", "TurnAroundTime", "FinishTime");
         for (int i = 0; i < numberOfProcess; i++) {
@@ -102,8 +107,10 @@ public class PriorityPreemptive {
         PriorityPreemptive obj = new PriorityPreemptive();
         obj.getProcessData(input);
         obj.preemptivePriorityAlgorithm();
+        input.close(); // Close scanner to avoid resource leak
     }
 }
+
 `;
   return (
     <div className="container mx-auto px-4 py-8">
