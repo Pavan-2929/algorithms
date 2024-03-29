@@ -7,7 +7,7 @@ const PreemptivePriorityScheduling = () => {
   const codeString = `
 import java.util.Scanner;
 
-public class PreemptivePriorityScheduling {
+public class PriorityPreemptive {
 
     int burstTime[];
     int priority[];
@@ -16,7 +16,7 @@ public class PreemptivePriorityScheduling {
     int numberOfProcess;
 
     void getProcessData(Scanner input) {
-        System.out.print("Enter the number of Processes for Scheduling: ");
+        System.out.print("Enter the number of Process for Scheduling: ");
         int inputNumberOfProcess = input.nextInt();
         numberOfProcess = inputNumberOfProcess;
         burstTime = new int[numberOfProcess];
@@ -25,7 +25,7 @@ public class PreemptivePriorityScheduling {
         processId = new String[numberOfProcess];
         String st = "P";
         
-        System.out.println("\\n Enter [burst time, arrival time, priority] (separated by spaces)");
+        System.out.println("\nEnter [burst time, arrival time, priority] (separated by spaces)");
         for (int i = 0; i < numberOfProcess; i++) {
             processId[i] = st.concat(Integer.toString(i));
             System.out.print("Process " + processId[i] + ": ");
@@ -44,7 +44,7 @@ public class PreemptivePriorityScheduling {
         int waitingTime[] = new int[numberOfProcess];
         int turnAroundTime[] = new int[numberOfProcess];
 
-        System.out.println("\\nGantt Chart:");
+        System.out.println("\nGantt Chart:");
 
         while (completed != numberOfProcess) {
             int highestPriority = Integer.MAX_VALUE;
@@ -88,18 +88,18 @@ public class PreemptivePriorityScheduling {
         float averageWaitingTime = sumWaiting / numberOfProcess;
         float averageTurnAroundTime = sumTurnAround / numberOfProcess;
 
-        System.out.println("\\nPreemptive Priority Scheduling Algorithm:\\n");
-        System.out.format("%-15s%-15s%-15s%-15s%-15s%-15s%-15s\\n", "ProcessId", "BurstTime", "ArrivalTime", "Priority", "WaitingTime", "TurnAroundTime", "FinishTime");
+        System.out.println("\nPreemptive Priority Scheduling Algorithm:\n");
+        System.out.format("%20s%20s%20s%20s%20s%20s%20s\n", "ProcessId", "BurstTime", "ArrivalTime", "Priority", "WaitingTime", "TurnAroundTime", "FinishTime");
         for (int i = 0; i < numberOfProcess; i++) {
-            System.out.format("%-15s%-15d%-15d%-15d%-15d%-15d%-15d\\n", processId[i], burstTime[i], arrivalTime[i], priority[i], waitingTime[i], turnAroundTime[i], arrivalTime[i] + turnAroundTime[i]);
+            System.out.format("%20s%20d%20d%20d%20d%20d%20d\n", processId[i], burstTime[i], arrivalTime[i], priority[i], waitingTime[i], turnAroundTime[i], arrivalTime[i] + turnAroundTime[i]);
         }
 
-        System.out.format("\\n%90s%-15f%-15f\\n", "Average", averageWaitingTime, averageTurnAroundTime);
+        System.out.format("\n%80s%20f%20f\n", "Average", averageWaitingTime, averageTurnAroundTime);
     }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        PreemptivePriorityScheduling obj = new PreemptivePriorityScheduling();
+        PriorityPreemptive obj = new PriorityPreemptive();
         obj.getProcessData(input);
         obj.preemptivePriorityAlgorithm();
     }
