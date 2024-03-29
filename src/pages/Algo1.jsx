@@ -4,7 +4,7 @@ import { vs } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 
 const PreemptivePriorityScheduling = () => {
-  const codeString = `
+const codeString = `
 import java.util.Scanner;
 
 public class PriorityPreemptive {
@@ -27,7 +27,7 @@ public class PriorityPreemptive {
         processId = new String[numberOfProcess];
         String st = "P";
         
-        System.out.println("\nEnter [burst time, arrival time, priority] (separated by spaces)");
+        System.out.println("\\n Enter [burst time, arrival time, priority] (separated by spaces)");
         for (int i = 0; i < numberOfProcess; i++) {
             processId[i] = st.concat(Integer.toString(i));
             System.out.print("Process " + processId[i] + ": ");
@@ -47,7 +47,7 @@ public class PriorityPreemptive {
         int waitingTime[] = new int[numberOfProcess];
         int turnAroundTime[] = new int[numberOfProcess];
 
-        System.out.println("\nGantt Chart:");
+        System.out.println("\\n Gantt Chart:");
 
         while (completed != numberOfProcess) {
             int highestPriority = Integer.MAX_VALUE;
@@ -93,13 +93,13 @@ public class PriorityPreemptive {
         float averageTurnAroundTime = sumTurnAround / numberOfProcess;
 
         // Display scheduling results
-        System.out.println("\nPreemptive Priority Scheduling Algorithm:\n");
-        System.out.format("%20s%20s%20s%20s%20s%20s%20s\n", "ProcessId", "BurstTime", "ArrivalTime", "Priority", "WaitingTime", "TurnAroundTime", "FinishTime");
+        System.out.println("\\n Preemptive Priority Scheduling Algorithm:\\n");
+        System.out.format("%20s%20s%20s%20s%20s%20s%20s\\n", "ProcessId", "BurstTime", "ArrivalTime", "Priority", "WaitingTime", "TurnAroundTime", "FinishTime");
         for (int i = 0; i < numberOfProcess; i++) {
-            System.out.format("%20s%20d%20d%20d%20d%20d%20d\n", processId[i], burstTime[i], arrivalTime[i], priority[i], waitingTime[i], turnAroundTime[i], arrivalTime[i] + turnAroundTime[i]);
+            System.out.format("%20s%20d%20d%20d%20d%20d%20d\\n", processId[i], burstTime[i], arrivalTime[i], priority[i], waitingTime[i], turnAroundTime[i], arrivalTime[i] + turnAroundTime[i]);
         }
 
-        System.out.format("\n%80s%20f%20f\n", "Average", averageWaitingTime, averageTurnAroundTime);
+        System.out.format("\\n%80s%20f%20f\\n", "Average", averageWaitingTime, averageTurnAroundTime);
     }
 
     public static void main(String[] args) {
@@ -110,8 +110,8 @@ public class PriorityPreemptive {
         input.close(); // Close scanner to avoid resource leak
     }
 }
-
 `;
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">
