@@ -4,7 +4,9 @@ import { vs } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 
 const Algo3 = () => {
-  const codeString = `public class FCFS_DiskScheduling {
+  const codeString = `import java.util.Scanner;
+
+public class FCFS_DiskScheduling {
 
     static void FCFS(int arr[], int head) {
         int seekCount = 0;
@@ -12,20 +14,12 @@ const Algo3 = () => {
 
         for (int i = 0; i < arr.length; i++) {
             curTrack = arr[i];
-
-            // Calculate absolute distance
             distance = Math.abs(curTrack - head);
-
-            // Increase the total count
             seekCount += distance;
-
-            // Accessed track is now the new head
             head = curTrack;
         }
 
         System.out.println("Total number of seek operations = " + seekCount);
-
-        // Seek sequence would be the same as the request array sequence
         System.out.println("Seek Sequence is");
 
         for (int i = 0; i < arr.length; i++) {
@@ -34,12 +28,23 @@ const Algo3 = () => {
     }
 
     public static void main(String[] args) {
-        
-        int arr[] = { 176, 79, 34, 60, 
-                  92, 11, 41, 114 };
-        int head = 50;
- 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of requests: ");
+        int n = scanner.nextInt();
+        int arr[] = new int[n];
+
+        System.out.println("Enter the disk request sequence:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        System.out.print("Enter the initial head position: ");
+        int head = scanner.nextInt();
+
         FCFS(arr, head);
+        
+        scanner.close(); 
     }
 }`;
 
