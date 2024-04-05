@@ -89,7 +89,6 @@ return (
       </h2>
       <ul className="list-disc pl-6 mb-4">
         <li>Every request gets a fair chance</li>
-        <li>No indefinite postponement</li>
         <li>Simple to implement</li>
       </ul>
     </div>
