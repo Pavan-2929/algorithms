@@ -3,8 +3,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 function Header() {
-
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -34,34 +32,26 @@ function Header() {
             <li className="md:ml-5 xl:mx-5 sm:mt-0 mt-10 hover:text-red-600">
               <NavLink to="/" onClick={closeMenu}>
                 <div className="line hover:text-red-600 flex items-center gap-2">
-                  Algo1
+                  Prio-Preemptive
                 </div>
               </NavLink>
             </li>
 
             <li className="md:ml-5 xl:mx-5 hover:text-red-600 ">
               <NavLink to="/algo2">
-                <div className="flex items-center gap-2">
-                  Algo2
-                </div>
+                <div className="flex items-center gap-2">Reader-Writer</div>
               </NavLink>
             </li>
             <li className="md:ml-5 xl:mx-5 hover:text-red-600 ">
               <NavLink to="/algo3">
-                <div className="flex items-center gap-2">
-                  Algo3
-                </div>
+                <div className="flex items-center gap-2">FCFS</div>
               </NavLink>
             </li>
             <li className="md:ml-5 xl:mx-5 hover:text-red-600 ">
               <NavLink to="/algo4">
-                <div className="flex items-center gap-2">
-                  Algo4
-                </div>
+                <div className="flex items-center gap-2">LRU</div>
               </NavLink>
             </li>
-
-            
           </ul>
         </div>
       </div>
